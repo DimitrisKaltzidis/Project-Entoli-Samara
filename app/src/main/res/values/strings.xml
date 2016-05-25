@@ -17,4 +17,11 @@
     <string name="communicate">Communicate</string>
     <string name="rate_us">Rate us</string>
     <string name="error_message">Catastrophic Failure!!! Relax just kidding but still something went wrong</string>
+    <string name="prefecture">"Prefecture: "</string>
+    <string name="free_access_point">Public free WiFi access point</string>
+    <string name="province">"Province: "</string>
+    <string name="prefecture_v2">"\n\nPrefecture: "</string>
+    <string name="municipality">"\n\nMunicipality: "</string>
+    <string name="location">"\n\nLocation: "</string>
+    <string name="ip">"\n\nIP: "</string>
 </resources>
