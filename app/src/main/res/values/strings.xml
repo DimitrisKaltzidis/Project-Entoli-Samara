@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Free public WiFi</string>
-    <string name="free_public_wifi_ngreece">Free public WiFi\nGreece</string>
+    <string name="app_name">Public free WiFi</string>
+    <string name="free_public_wifi_ngreece">Public free WiFi\nGreece</string>
     <string name="title_activity_map">Map</string>
-    <string name="title_activity_navigation_map">NavigationMap</string>
+    <string name="title_activity_navigation_map">Access Points</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
     <string name="free_public_wifi_greece">Free public WiFi Greece</string>
@@ -22,6 +22,17 @@
     <string name="province">"Province: "</string>
     <string name="prefecture_v2">"\n\nPrefecture: "</string>
     <string name="municipality">"\n\nMunicipality: "</string>
+    <string name="municipality_v2">"Municipality: "</string>
     <string name="location">"\n\nLocation: "</string>
     <string name="ip">"\n\nIP: "</string>
+    <string name="public_free_wifi_greece">Public free WiFi Greece</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="uses_open_data">\nThis is an open source app that uses open data</string>
+    <string name="developed_by_jim_kaltzidis">Developed by Jim Kaltzidis</string>
+    <string name="information_title">Information</string>
+    <string name="tap_for_more">More</string>
+    <string name="hey_i_use">"Hey i am using the"</string>
+    <string name="try_it">" app and it is awesome. You should try it too specially if you are visiting Greece "</string>
+    <string name="use_satellite_map">Use satellite map</string>
+    <string name="use_default_marker">Use default map marker</string>
 </resources>

@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     tools:context="com.dev.jim.freepublicwifi.Information"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="72dp">
+    tools:layout_editor_absoluteY="73dp">
 
     <ImageView
         android:src="@drawable/logo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="47dp"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="54dp"
         android:id="@+id/imageView3"
         app:layout_constraintLeft_toLeftOf="@+id/activity_information"
         tools:layout_constraintLeft_creator="0"
@@ -29,13 +29,14 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
+        android:text="@string/public_free_wifi_greece"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="121dp"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="128dp"
         android:id="@+id/textView4"
         tools:text="Public free WiFi Greece"
+        android:gravity="center"
         app:layout_constraintLeft_toLeftOf="@+id/activity_information"
         tools:layout_constraintLeft_creator="0"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
@@ -45,13 +46,14 @@
         tools:layout_constraintRight_creator="0" />
 
     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
+        android:text="@string/uses_open_data"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="153dp"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="184dp"
         android:id="@+id/textView5"
         tools:text="This is an open source app that uses open data"
+        android:gravity="center"
         app:layout_constraintLeft_toLeftOf="@+id/activity_information"
         tools:layout_constraintLeft_creator="0"
         app:layout_constraintRight_toRightOf="@+id/activity_information"
@@ -62,34 +64,32 @@
         app:layout_constraintHorizontal_bias="0.54" />
 
     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
+        android:text="@string/developed_by_jim_kaltzidis"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="194dp"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="224dp"
         android:id="@+id/textView6"
         tools:text="Developed by Jim Kaltzidis"
+        android:gravity="center"
         app:layout_constraintLeft_toLeftOf="@+id/activity_information"
         tools:layout_constraintLeft_creator="0"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="80dp"
         tools:layout_constraintTop_creator="0"
         app:layout_constraintRight_toRightOf="@+id/activity_information"
         tools:layout_constraintRight_creator="0" />
 
     <android.support.design.widget.FloatingActionButton
         android:src="@drawable/github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:clickable="true"
         app:fabSize="mini"
-        tools:layout_editor_absoluteX="423dp"
-        tools:layout_editor_absoluteY="191dp"
+        android:onClick="gitHubButtonClicked"
+        tools:layout_editor_absoluteX="516dp"
+        tools:layout_editor_absoluteY="211dp"
         android:id="@+id/floatingActionButton"
-        app:layout_constraintLeft_toRightOf="@+id/textView4"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        tools:layout_constraintLeft_creator="0"
         app:layout_constraintRight_toRightOf="@+id/activity_information"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"

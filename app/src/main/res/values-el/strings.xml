@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Δημόσια WiFi "</string>
+    <string name="action_settings">Ρυθμίσεις</string>
+    <string name="communicate">Επικοινωνία</string>
+    <string name="developed_by_jim_kaltzidis">Δημιουργός Δημήτρης Καλτζίδης</string>
+    <string name="error_message">Ωχ! Κάτι πήγε στραβά!</string>
+    <string name="feedback">Πες μας τη γνώμη σου</string>
+    <string name="free_access_point">Δημόσιο δωρεάν σημείο πρόσβασης WiFi</string>
+    <string name="free_public_wifi_greece">Δημόσια δωρέαν σημεία WiFi</string>
+    <string name="free_public_wifi_ngreece">Δημόσια δωρέαν σημεία WiFi\nΕλλάδα</string>
+    <string name="information">Πληροφορίες</string>
+    <string name="information_title">Πληροφορίες</string>
+    <string name="ip">"\n\n IP: "</string>
+    <string name="location">"\n\nΤοποθεσία: "</string>
+    <string name="municipality">"\n\nΔήμος: "</string>
+    <string name="municipality_v2">""Δήμος: "</string>
+    <string name="powered_by_open_data">Χρήση ανοικτών δεδομένων</string>
+    <string name="prefecture">"Νομαρχία: "</string>
+    <string name="prefecture_v2">"\n\nΝομαρχία: "</string>
+    <string name="province">"Περιφέρεια: "</string>
+    <string name="public_free_wifi_greece">Δημόσια δωρέαν σημεία WiFi στην Ελλάδα</string>
+    <string name="rate_us">"Βαθμολόγησε μας "</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="share">Μοιράσου το app</string>
+    <string name="title_activity_map">Χάρτης</string>
+    <string name="title_activity_navigation_map">Σημεία πρόσβασης</string>
+    <string name="uses_open_data">\nΑυτή η εφαρμογή είναι ανοιχτού κώδικα και χρησιμοποιεί ανοικτά δεδομένα</string>
+    <string name="tap_for_more">Περισσότερα</string>
+    <string name="hey_i_use">"Παίδες βρήκα ένα app με όλα τα δημόσια δωρεάν WiFi στην Ελλάδα λέγεται "</string>
+    <string name="try_it">". Μπορείτε να το βρείτε εδω : "</string>
+    <string name="use_satellite_map">Χρήση δορυφορικού χάρτη</string>
+    <string name="use_default_marker">Χρήση προεπιλεγμένης πινέζας χάρτη</string>
+</resources>

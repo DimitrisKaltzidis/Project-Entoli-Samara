@@ -53,14 +53,14 @@ public class NavigationMap extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setVisibility(View.GONE);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setVisibility(View.INVISIBLE);
+      /*  fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -141,9 +141,9 @@ public class NavigationMap extends AppCompatActivity
         } else if (id == R.id.nav_settings) {
             startActivity(new Intent(NavigationMap.this, Settings.class));
         } else if (id == R.id.nav_share) {
-
+            shareIt();
         } else if (id == R.id.nav_send) {
-
+            sendEmail();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -156,6 +156,10 @@ public class NavigationMap extends AppCompatActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        if (Preferences.loadPrefsInt("MAP_TYPE", GoogleMap.MAP_TYPE_NORMAL, getApplicationContext()) == GoogleMap.MAP_TYPE_SATELLITE) {
+            mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        }
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -170,6 +174,8 @@ public class NavigationMap extends AppCompatActivity
                     MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
 
             return;
+        } else {
+            mMap.setMyLocationEnabled(true);
         }
 
         mMap.setOnInfoWindowClickListener(mClusterManager);
@@ -208,6 +214,15 @@ public class NavigationMap extends AppCompatActivity
         }
     }
 
+    private void shareIt() {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.hey_i_use) + getResources().getString(R.string.app_name) + getString(R.string.try_it) + "https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
+        sendIntent.setType("text/plain");
+        startActivity(sendIntent);
+
+    }
+
     @Override
     public void onInfoWindowClick(Marker marker) {
         AccessPoint selected = findAccessPoint(marker.getTitle(), marker.getSnippet(), accessPoints);
@@ -241,6 +256,20 @@ public class NavigationMap extends AppCompatActivity
         }
 
         return null;
+    }
+
+    private void sendEmail() {
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("text/plain");
+        i.putExtra(Intent.EXTRA_EMAIL, new String[]{"filtatos.h.x@gmail.com"});
+        i.putExtra(Intent.EXTRA_SUBJECT, "User feedback");
+
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Snackbar.make(findViewById(R.id.fab), R.string.error_message, Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
     }
 
     @Override

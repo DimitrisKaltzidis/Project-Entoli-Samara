@@ -21,7 +21,7 @@ public class Splash extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        TextView tx = (TextView)findViewById(R.id.textView);
+      /*  TextView tx = (TextView)findViewById(R.id.textView);
 
 
         YoYo.with(Techniques.FadeIn)
@@ -31,7 +31,7 @@ public class Splash extends AppCompatActivity {
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/MagdaClean.otf");
 
         tx.setTypeface(custom_font);
-
+*/
         new Timer().schedule(new TimerTask() {
             public void run() {
                 startActivity(new Intent(Splash.this, NavigationMap.class));

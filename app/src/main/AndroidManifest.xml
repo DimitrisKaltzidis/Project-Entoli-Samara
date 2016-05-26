@@ -49,7 +49,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dev.jim.freepublicwifi.NavigationMap" />
         </activity>
-        <activity android:name=".Information"></activity>
+        <activity
+            android:name=".Information"
+            android:label="@string/information_title"
+            android:parentActivityName=".NavigationMap">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dev.jim.freepublicwifi.NavigationMap" />
+        </activity>
     </application>
 
 </manifest>
